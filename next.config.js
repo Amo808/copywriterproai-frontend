@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 
-const { withSentryConfig } = require("@sentry/nextjs");
+// Temporarily disable Sentry for deployment
+// const { withSentryConfig } = require("@sentry/nextjs");
 const path = require("path");
 
 const nextConfig = {
@@ -13,11 +14,12 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  sentry: {
-    hideSourceMaps: true,
-  },
+  // sentry: {
+  //   hideSourceMaps: true,
+  // },
 };
 
-const sentryWebpackPluginOptions = {};
+// const sentryWebpackPluginOptions = {};
 
-module.exports = withSentryConfig(nextConfig, sentryWebpackPluginOptions);
+// module.exports = withSentryConfig(nextConfig, sentryWebpackPluginOptions);
+module.exports = nextConfig;
