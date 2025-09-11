@@ -13,6 +13,7 @@
       "@/hooks/*": ["hooks/*"],
       "@/styles/*": ["styles/*"],
       "@/api/*": ["lib/api/*"],
+      "@/api": ["lib/api"],
       "@/layout/*": ["layout/*"],
       "@/lib/*": ["lib/*"]
     }
