@@ -3,9 +3,9 @@ import axios from "axios";
 import { pick } from "@/utils";
 import prices from "@/data/price.json";
 
-const redirect_url = "https://copywriterpro.ai/";
-const cancel_url = "https://copywriterpro.ai/bd-pricing";
-const webhook_url = "https://api.copywriterpro.ai/v1/payments/udp-webhook";
+const redirect_url = process.env.NEXT_PUBLIC_APP_URL || "https://copywriterpro.ai/";
+const cancel_url = (process.env.NEXT_PUBLIC_APP_URL || "https://copywriterpro.ai") + "/bd-pricing";
+const webhook_url = process.env.NEXT_PUBLIC_APP_API_URL + "/v1/payments/udp-webhook";
 const checkoutURL = "https://bdpayments.copywriterpro.ai/api/checkout";
 
 const apiKey = process.env.UDDOKTAPAY_API;
